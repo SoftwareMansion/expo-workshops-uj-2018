@@ -18,7 +18,7 @@ export default class App extends React.Component {
     const permission = await Permissions.askAsync(Permissions.LOCATION);
 
     if (permission.status === 'granted') {
-      const location = await Location.getCurrentPositionAsync();
+      const location = await Location.getCurrentPositionAsync({});
       
       this.setState({
         region: {
