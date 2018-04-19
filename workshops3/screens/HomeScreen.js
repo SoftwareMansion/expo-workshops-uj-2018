@@ -20,13 +20,22 @@ export default class HomeScreen extends React.Component {
     )
   });
 
-  state = { refreshing: true, images: [], loadingMore: false };
+  state = {
+    refreshing: false,
+    images: [
+      { webformatURL : 'https://cdn.pixabay.com/photo/2015/03/26/21/33/hot-air-balloon-693452__340.jpg', user: 'user1', id:1},
+      { webformatURL : 'https://cdn.pixabay.com/photo/2015/06/22/08/39/child-817371__340.jpg', user: 'user2', id:2},
+      { webformatURL : 'https://cdn.pixabay.com/photo/2015/06/16/16/46/meadow-811339__340.jpg', user: 'user3', id:3},
+      { webformatURL : 'https://cdn.pixabay.com/photo/2018/03/05/15/45/nature-3201015__340.jpg', user: 'user4', id:4}
+    ],
+    loadingMore: false
+  };
 
-  componentDidMount() {
-    getImages(this.state.images.length)
-      .then(this.handleFirstData)
-      .catch(this.handleError);
-  }
+  // componentDidMount() {
+  //   getImages(this.state.images.length)
+  //     .then(this.handleFirstData)
+  //     .catch(this.handleError);
+  // }
 
   getItemLayout = (data, index) => ({
     length: postHeight,
