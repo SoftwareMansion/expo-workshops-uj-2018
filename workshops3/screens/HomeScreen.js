@@ -52,10 +52,8 @@ export default class HomeScreen extends React.Component {
     !this.state.loadingMore &&
     this.setState({ loadingMore: true }, this.loadMore);
 
-  loadMore = () =>
-    getImages(this.state.images.length)
-      .then(this.handleMoreData)
-      .catch(this.handleError);
+  loadMore = () => {return;}
+
 
   handleFirstData = ({ images }) =>
     this.setState({
@@ -81,10 +79,7 @@ export default class HomeScreen extends React.Component {
       presentError(error)
     );}
 
-  refresh = () =>
-    fetchNewerImages(this.state.images[0] && this.state.images[0].id)
-      .then(this.handleNewData)
-      .catch(this.handleError);
+  refresh = () => {return; }
 
   renderItem = ({ item }) => <Post key={item.key} image={item} />;
 
