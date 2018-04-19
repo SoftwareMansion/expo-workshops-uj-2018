@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "CaptureGram",
+    "description":
+      "Impress your friends at parties showing how easy and simple it is to write an Instagram copy in Expo",
+    "slug": "capture-gram",
+    "privacy": "public",
+    "sdkVersion": "26.0.0",
+    "platforms": ["ios", "android"],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "primaryColor": "#4830E5",
+    "githubUrl": "https://github.com/SoftwareMansion/capturegram",
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.swmansion.capturegram"
+    }
+  }
+}

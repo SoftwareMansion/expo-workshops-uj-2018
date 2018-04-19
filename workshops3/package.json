@@ -1,0 +1,21 @@
+{
+  "name": "capture-gram",
+  "version": "0.0.0",
+  "description": "An example application showing advantages of React Native and Expo",
+  "author": {
+    "name": "Stanisław Chmiela",
+    "url": "https://github.com/sjchmiela",
+    "email": "stanislaw.chmiela@swmansion.com"
+  },
+  "private": true,
+  "main": "node_modules/expo/AppEntry.js",
+  "dependencies": {
+    "@expo/vector-icons": "6.2.1",
+    "expo": "^26.0.0",
+    "react": "16.3.0-alpha.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-26.0.0.tar.gz",
+    "react-native-elements": "0.18.5",
+    "react-navigation": "1.5.8",
+    "unsplash-js": "^4.8.0"
+  }
+}
