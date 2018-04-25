@@ -77,7 +77,7 @@ export default class HomeScreen extends React.Component {
       .then(this.handleNewData)
       .catch(this.handleError);
 
-  renderItem = ({ item }) => <Post key={item.key} image={item} />;
+  renderItem = ({ item }) => <Post key={item.id} image={item} />;
 
   render() {
     return (

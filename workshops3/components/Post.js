@@ -27,7 +27,6 @@ export default class Post extends React.Component {
       id: PropTypes.number.isRequired,
       webformatURL: PropTypes.string.isRequired,
       user: PropTypes.string.isRequired,
-      userImageURL: PropTypes.string.isRequired
     }).isRequired
   };
 
@@ -111,6 +110,21 @@ export default class Post extends React.Component {
     </View>
   );
 
+  renderFooter = () => (
+    <View style={styles.footer}>
+      <TouchableOpacity
+        style={styles.kebab}
+        onPress={this.handlePictureDoubleTapped}
+      >
+        <MaterialCommunityIcons
+          size={32}
+          color="#555"
+          name={`heart${!this.state.postLiked ? "-outline" : ""}`}
+        />
+      </TouchableOpacity>
+    </View>
+  );
+
   render() {
     return (
       <View style={styles.container}>
@@ -122,7 +136,7 @@ export default class Post extends React.Component {
           <View>
             <Image
               style={styles.mainImage}
-              source={{ uri: this.props.image.webformatURL }}
+              source={{ uri: this.props.image.webformatURL.replace(/^https/, 'http') }} // Android has some problems in loading from https from pixabay
             />
             <Animated.View
               style={[
@@ -138,6 +152,7 @@ export default class Post extends React.Component {
             </Animated.View>
           </View>
         </TapGestureHandler>
+        {this.renderFooter()}
       </View>
     );
   }

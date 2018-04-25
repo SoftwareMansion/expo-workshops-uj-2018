@@ -3,7 +3,7 @@ const maximumNewItemsCount = 10;
 
 const fetchImages = (pageSize, pageIndex) =>
   fetch(
-    `https://pixabay.com/api/?key=${KEY}&per_page=${pageSize}&page=${pageIndex}&order=latest`
+    `http://pixabay.com/api/?key=${KEY}&per_page=${pageSize}&page=${pageIndex}&order=latest`
   );
 
 export const getImages = async (last, before) => {

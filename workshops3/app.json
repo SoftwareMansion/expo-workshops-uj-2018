@@ -12,6 +12,11 @@
     "icon": "./assets/icon.png",
     "primaryColor": "#4830E5",
     "githubUrl": "https://github.com/SoftwareMansion/capturegram",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
